@@ -46,10 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AiController.cs" />
+     <Compile Include="Assets\AiRacer.cs" />
+     <Compile Include="Assets\AiWayPointsRandom.cs" />
+     <Compile Include="Assets\AiWayPointsSequential.cs" />
      <Compile Include="Assets\FindNearestByTag.cs" />
      <Compile Include="Assets\MoveTowards.cs" />
-     <Compile Include="Assets\WayPointInterface.cs" />
-     <Compile Include="Assets\aiController.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
