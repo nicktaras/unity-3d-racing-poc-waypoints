@@ -64,11 +64,15 @@ public class AiRacer : MonoBehaviour
 
 	void race () {
 
-//		AiWayPointsRandom _aiWayPointsToRandom = GetComponent<AiWayPointsRandom>();
-		AiWayPointsSequential _aiWayPointsToRandom = GetComponent<AiWayPointsSequential>();
-		MoveTowards _moveTowards = GetComponent<MoveTowards>();
-
+		// Apply for random waypoints.
+		AiWayPointsRandom _aiWayPointsToRandom = GetComponent<AiWayPointsRandom>();
 		racer.wayPointTarget = _aiWayPointsToRandom.getCurrentWayPoint ();
+
+		// Apply for sequential waypoints.
+//		AiWayPointsSequential _aiWayPointsSequential = GetComponent<AiWayPointsSequential>();
+//		racer.wayPointTarget = _aiWayPointsSequential.getCurrentWayPoint ();
+
+		MoveTowards _moveTowards = GetComponent<MoveTowards>();
 		_moveTowards.moveToTarget (racer.wayPointTarget);
 
 	}
