@@ -1,6 +1,6 @@
 ﻿/* AiWayPoints (UNITY C#)
 * 
-* AiWayPointsRandom:
+* AiWayPoints:
 * 
 * USE:
 * - To orchestrate the way points of an object in a random order.
@@ -63,7 +63,6 @@ public class AiWayPointsRandom : MonoBehaviour {
 
 			if(_hasReachedWayPoint == true) { 
 
-
 				setNextRandomWayPoint ();
 
 			}
@@ -118,7 +117,7 @@ public class AiWayPointsRandom : MonoBehaviour {
 
 		float distance = (transform.position - _target.transform.position).sqrMagnitude;
 
-		if (distance < Random.Range(2, 3)) {
+		if (distance < Random.Range(1, 10)) {
 			_wayPointReached = true;
 		}
 

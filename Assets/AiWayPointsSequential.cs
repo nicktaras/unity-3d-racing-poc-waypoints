@@ -133,7 +133,7 @@ public class AiWayPointsSequential : MonoBehaviour {
 
 		float distance = (transform.position - _target.transform.position).sqrMagnitude;
 
-		if (distance < Random.Range(2, 3)) {
+		if (distance < Random.Range(2, 7)) {
 			_wayPointReached = true;
 		}
 

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DBE9A95C-F9C6-3F4E-7E1B-0F75C32E320F}</ProjectGuid>
+    <ProjectGuid>{6AFAB6CA-5698-860D-8AB9-F27AF0508F61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -52,6 +52,7 @@
      <Compile Include="Assets\AiWayPointsSequential.cs" />
      <Compile Include="Assets\FindNearestByTag.cs" />
      <Compile Include="Assets\MoveTowards.cs" />
+     <Compile Include="Assets\follow.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

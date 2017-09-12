@@ -22,7 +22,9 @@ using System.Collections;
 
 public class AiRacer : MonoBehaviour
 {
-	
+
+	public string waypointMode;
+
 	public class Racer
 	{
 		public GameObject wayPointTarget;
@@ -64,13 +66,19 @@ public class AiRacer : MonoBehaviour
 
 	void race () {
 
-		// Apply for random waypoints.
-		AiWayPointsRandom _aiWayPointsToRandom = GetComponent<AiWayPointsRandom>();
-		racer.wayPointTarget = _aiWayPointsToRandom.getCurrentWayPoint ();
+		if(waypointMode == "RANDOM"){
 
-		// Apply for sequential waypoints.
-//		AiWayPointsSequential _aiWayPointsSequential = GetComponent<AiWayPointsSequential>();
-//		racer.wayPointTarget = _aiWayPointsSequential.getCurrentWayPoint ();
+			// Apply for random waypoints.	
+			AiWayPointsRandom _aiWayPointsToRandom = GetComponent<AiWayPointsRandom>();
+			racer.wayPointTarget = _aiWayPointsToRandom.getCurrentWayPoint ();
+
+		} else {
+			
+			// Apply for sequential waypoints.
+			AiWayPointsSequential _aiWayPointsSequential = GetComponent<AiWayPointsSequential>();
+			racer.wayPointTarget = _aiWayPointsSequential.getCurrentWayPoint ();
+
+		}
 
 		MoveTowards _moveTowards = GetComponent<MoveTowards>();
 		_moveTowards.moveToTarget (racer.wayPointTarget);
